@@ -34,6 +34,7 @@ let nombre = ""
 let letra = ""
 for (const letra of hacker1) {
     nombre += letra.toUpperCase();
+    nombre += " "
   }
 console.log(nombre);
 
@@ -49,7 +50,19 @@ for (let i=hacker2.length - 1; i >= 0; i--) { //recorre el bucle del revés desd
 // - Yo, the navigator goes first definitely.
 // - What?! You both have the same name?
 
+let hackersArray = [hacker1, hacker2];
 
+hackersArray = hackersArray.sort();
+
+if(hacker1 === hacker2){
+    console.log("What? You both have the same name?");
+}
+else if(hackersArray[0] === hacker1){
+    console.log("The driver's name goes first.");
+}
+else if(hackersArray[0] === hacker2){
+    console.log("Yo, the navigator goes first definitely");
+}
 
 // Bonus 1:
 // Go to lorem ipsum generator and:
